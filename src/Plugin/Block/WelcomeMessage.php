@@ -59,8 +59,7 @@ class WelcomeMessage extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-      $path = '/'.drupal_get_path('module', 'manifest_banner') . '/images/';
-
+    
       $hide = $this->configuration['hide'];
 
       $build = [];
