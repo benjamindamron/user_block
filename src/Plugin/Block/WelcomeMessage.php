@@ -72,7 +72,7 @@ class WelcomeMessage extends BlockBase {
               '#type' => 'html_tag',
               '#tag' => 'div',
               '#theme' => 'user_block',
-              '#user_info' => $output = views_embed_view('user_block'),
+              '#user_info' => views_embed_view('user_block'),
               '#message' => $this->configuration['message'],
           ];
 
