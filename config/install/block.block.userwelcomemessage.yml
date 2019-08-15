@@ -1,0 +1,22 @@
+uuid: bd8e1ab7-5de9-46c2-8ab1-685e6bbcad91
+langcode: en
+status: true
+dependencies:
+  module:
+    - user_block
+  theme:
+    - bartik
+id: userwelcomemessage
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: user_welcome
+settings:
+  id: user_welcome
+  label: 'User Welcome Message'
+  provider: user_block
+  label_display: '0'
+  message: 'Customize this text by editing this block. The information above is only shown to authenticated users and comes from an embedded Views display. This text can be hidden for anonymous users in the block configuration.'
+  hide: 0
+visibility: {  }

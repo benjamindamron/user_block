@@ -1,0 +1,6 @@
+name: User Block
+description: Custom module for a user welcome block.
+package: damron
+type: module
+version: 1.0
+core: 8.x
