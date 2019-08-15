@@ -1,0 +1,22 @@
+<?php
+
+function user_block_uninstall() {
+    
+      /** @var \Drupal\Core\Config\ConfigFactoryInterface $configFactory */
+      $configFactory = \Drupal::configFactory();
+      $logger = \Drupal::logger('user_block');
+    
+      $configNames = [
+            'block.block.userwelcomemessage',
+            'views.view.user_block',
+          ];
+    
+      foreach ($configNames as $configName) {
+            try {
+                  $configFactory->getEditable($configName)->delete();
+                }
+    catch (\Exception $e) {
+                  $logger->warning(sprintf('Unable to uninstall config: %s.', $configName));
+                }
+  }
+}
